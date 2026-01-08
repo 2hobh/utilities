@@ -1236,7 +1236,8 @@ function TabModule:New(Title, Parent)
 	Tab.SearchContainer = Create("Frame", {
 		Size = UDim2.new(1, 0, 0, 36),
 		BackgroundTransparency = 1,
-		Parent = Parent,
+		Parent = TabModule.Window,
+		Position = UDim2.new(0, 140, 0, 40),
 		LayoutOrder = -1, -- Make sure it appears at the top
 		ThemeProps = {
 			BackgroundColor3 = "maincolor",
@@ -1447,7 +1448,6 @@ function TabModule:SelectTab(Tab)
         -- Show search container for selected tab
         if selectedTab.SearchContainer then
             selectedTab.SearchContainer.Visible = true
-			selectedTab.SearchContainer.Position = UDim2.new(0, 140, 0, 40)
         end
 
         TabModule.Containers[Tab].Visible = true
