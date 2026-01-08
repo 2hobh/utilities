@@ -1236,7 +1236,7 @@ function TabModule:New(Title, Parent)
 	Tab.SearchContainer = Create("Frame", {
 		Size = UDim2.new(1, 0, 0, 36),
 		BackgroundTransparency = 1,
-		Parent = Tab.Container,
+		Parent = TabModule.Window,
 		LayoutOrder = -1, -- Make sure it appears at the top
 		ThemeProps = {
 			BackgroundColor3 = "maincolor",
